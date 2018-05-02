@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Hangman</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="css/style.css" />
+    
+</head>
+<body>
+
+    <script type="text/javascript">
+    
+        //declare variables
+
+        var bands = ["nirvana", "metallica", "pantera"];
+        var wins= 0;
+        var guessRem = 10;
+        var letGuess = [];
+        
+
+               //Get user key stroke 
+               document.onkeyup = function(event) {
+               
+                    //Assign user key stroke to variable    
+                    var userGuess = event.key.toLowerCase(); 
+                    
+                    
+                    for (i = 0; i < bands[0].length; i++){
+
+                            if (userGuess==bands[0][i]){
+                                letGuess[i] = userGuess;
+                                document.write(letGuess);
+                            } else {
+
+                                
+                            }
+                        
+                        }
+                        
+
+               }
+    
+    </script>
+
+</body>
+</html>
