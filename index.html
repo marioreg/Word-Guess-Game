@@ -1,48 +1,80 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Hangman</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" media="screen" href="css/style.css" />
-    
-</head>
-<body>
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Hangman!</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
 
-    <script type="text/javascript">
-    
-        //declare variables
+  </head>
 
-        var bands = ["nirvana", "metallica", "pantera"];
-        var wins= 0;
-        var guessRem = 10;
-        var letGuess = [];
+  <div class="jumbotron jumbotron-fluid">
+      <div class="container">
+        <div class="row">
+          <div class="col-6">
+             <h1>Hangman</h1>
+             <p>Press any key to get started</p>
+          </div>
+          <div class="col">
+              <button type="button" class="btn btn-primary btn-lg mx-auto d-block" id="start-button">Play</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-6 text-center">
+            <h3>Current word:
+              <br>
+              <span id="placeholder">___ ___ ___ ___ ___ ___</span>
+            </h3>
+        </div>
+        <div class="col-6 text-center">
+            <h3>Guessed letters:
+                <br>
+                <span id="guessed_sofar"></span>
+              </h3>
+        </div>
+      </div>
+      <div class="row">
+          <div class="col-4 text-center">
+              <h3>Guesses left:
+                  <br>
+                  <span id="guesses_left"></span>
+                </h3>
+          </div>
+          <div class="col-4 text-center">
+              <h3>Wins:
+                  <br>
+                  <span id="correct_wins"></span>
+                </h3>
+          </div>
+          <div class="col-4 text-center">
+              <h3>Losses:
+                  <br>
+                  <span id="wrong_losses"></span>
+                </h3>
+          </div>
+        </div>
+
         
 
-               //Get user key stroke 
-               document.onkeyup = function(event) {
-               
-                    //Assign user key stroke to variable    
-                    var userGuess = event.key.toLowerCase(); 
-                    
-                    
-                    for (i = 0; i < bands[0].length; i++){
+    </div>
 
-                            if (userGuess==bands[0][i]){
-                                letGuess[i] = userGuess;
-                                document.write(letGuess);
-                            } else {
 
-                                
-                            }
-                        
-                        }
-                        
 
-               }
-    
-    </script>
 
-</body>
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+    <script src="javascript/game.js"></script>
+  </body>
 </html>
