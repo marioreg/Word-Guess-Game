@@ -1,10 +1,13 @@
-.row, .col, .col-6, .col-4 {
-
-    border: 1px solid black;
-    padding:15px 0px 15px 0px;
-}
 
 #placeholder {
 
     letter-spacing: 10px;
+}
+
+#but{
+    align-content: center;
+}
+
+#jumbo{
+    text-align: center;
 }

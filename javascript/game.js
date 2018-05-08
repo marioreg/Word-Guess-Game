@@ -32,10 +32,10 @@ function newGame() {
 	pickedWordPlaceholderArr = [];
     
 	
-	//pick a new wordBank
+	//pick a new wird from wordBank
 	pickedWord = wordBank[Math.floor(Math.random() * wordBank.length)];
 	
-	//create placeholders out of new length
+	//create placeholders out of new word 
 	
 	for (var i=0; i < pickedWord.length; i++){
 		
@@ -87,9 +87,7 @@ function leterGuess(letter) {
 	
 }
 
-
 //check for incorrect letter
-
 	function checkIncorrect(letter){
 		//Check to see if letter did not make it into the placeholder / incorrect guessed
 		if
@@ -108,7 +106,7 @@ function leterGuess(letter) {
 	}
 
 
-//check losses
+//check losses function
 
 function checkLoss(){
 	
@@ -124,7 +122,7 @@ function checkLoss(){
 }
 
 
-//check wins
+//check wins function
 
 function checkWin(){
 	if (pickedWord.toLowerCase() === pickedWordPlaceholderArr.join("").toLowerCase())
